@@ -15,9 +15,8 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class,'homepage']);
+
 
 
 Route::get('post',[HomeController::class,'post'])->middleware(['auth','admin']);
